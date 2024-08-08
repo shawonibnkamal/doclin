@@ -7,7 +7,7 @@
     import Button from './Button.svelte';
 
     let searchQuery: string = '';
-    let threads: Array<ThreadType> = [];
+    let threads: ThreadType[] = [];
 
     const handleSearchQuery = (event: any) => {
         searchQuery = event.target.value;
@@ -27,7 +27,7 @@
         switch (message.type) {
             case 'searchThreads':
                 threads = message.value;
-                console.log('m', message, threads);
+                console.log('threads',threads);
                 break;
             };
     };
